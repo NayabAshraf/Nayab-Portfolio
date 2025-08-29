@@ -2,9 +2,11 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import FakeNewDetectionImg from "@/public/FakeNewsDetection.png";
+// import SmartSummarizerImg from "@/public/SmartSummarizer.png";
+import SmartSummarizerImg from "/public/SmartSummarizer.png";
+// import AIContentDetectorImg from "@/public/AIContentDetector.png";
+import AIContentDetectorImg from "/public/AIContentDetector.png";
 
 export const links = [
   {
@@ -14,6 +16,10 @@ export const links = [
   {
     name: "About",
     hash: "#about",
+  },
+  {
+    name: "Education",
+    hash: "#education",
   },
   {
     name: "Projects",
@@ -33,58 +39,84 @@ export const links = [
   },
 ] as const;
 
+export const educationData = [
+  {
+    degree: "Bachelor of Science in Computer Science",
+    institution: "National University of Modern Languages",
+    location: "Rawalpindi, Pakistan",
+    description: "Relevant coursework: Algorithms, Data Structures, Machine Learning, Artificial Intelligence",
+    date: "2021 - 2025",
+    gradeScored: "3.78/4.00 CGPA",
+  },
+  {
+    degree: "Data Analytics",
+    institution: "Leverify Quest",
+    location: "Rawalpindi, Pakistan",
+    description: "Data Visualization, Interpretation, PowerBI",
+    date: "2024",
+  },
+  {
+    degree: "Python Basics - Coursera",
+    institution: "University of Michigan",
+    location: "USA",
+    description: "Python Programming, Variables, Loops, Functions",
+    date: "2023",
+  },
+
+] as const;
+
+
 export const experiencesData = [
+
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "AI Machine Learning Developer",
+    location: "Ash Tech's",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Worked on developing and implementing AI/ML models, while also collaborating with the team to integrate the solutions into real-world applications.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2025",
   },
+
+
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Machine Learning Intern",
+    location: "Inotech Solutions",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+      "Developed and implemented a machine learning model, built a user-friendly frontend with React.js for model interaction, and collaborated with a team to integrate the solution into a real-world application.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2024",
   },
-  {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
-  },
+
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Fake News Detector",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "Built a Fake News Detection system using ML models and NLP techniques, with a user-friendly React.js frontend, FastAPI, and MongoDB for real-time verification.",
+    tags: ["React", "Next.js", "MongoDB", "Python", "FastAPI"],
+    imageUrl: FakeNewDetectionImg,
   },
   {
-    title: "rmtDev",
+    title: "Large Document Summarizer",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Developed a Large Document Summarizer using BART-large-CNN with PDF and DOCX support for efficient summarization of lengthy documents.",
+    tags: ["React", "Python", "AI"],
+    imageUrl: SmartSummarizerImg,
   },
   {
-    title: "Word Analytics",
+    title: "AI Content Detector",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Developed an AI Content Detector using GPT-2 and NLP techniques with perplexity, burstiness, and frequency analysis to identify AI-generated text.",
+    tags: ["Python", "NLP", "AI"],
+    imageUrl: AIContentDetectorImg,
   },
 ] as const;
 
 export const skillsData = [
+  "Python",
+  "AI",
+  "ML",
   "HTML",
   "CSS",
   "JavaScript",
@@ -94,14 +126,5 @@ export const skillsData = [
   "Node.js",
   "Git",
   "Tailwind",
-  "Prisma",
   "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
 ] as const;
